@@ -1,0 +1,125 @@
+@import "../../../variable.scss";
+
+.AnalyticsContainer {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+
+  @include respond-to(medium) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include respond-to(extraSmall) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .Content {
+    width: 150px;
+    background-color: $black1;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 5px;
+
+    @include respond-to(large) {
+      width: unset;
+    }
+
+    .IconContainer {
+      border-radius: 5px;
+      height: 40px;
+      width: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      svg {
+        font-size: 30px;
+      }
+
+      &.Blue {
+        background-color: $blue1;
+
+        svg path {
+          fill: $blue2;
+        }
+      }
+      &.Green {
+        background-color: $green1;
+
+        svg path {
+          fill: $green2;
+        }
+      }
+      &.Orange {
+        background-color: $orange1;
+
+        svg path {
+          fill: $orange2;
+        }
+      }
+      &.Pink {
+        background-color: $pink1;
+
+        svg path {
+          fill: $pink2;
+        }
+      }
+    }
+
+    .Header {
+      font-size: 14px;
+      color: $white;
+    }
+    .Details {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      color: $white;
+      font-size: 25px;
+      font-weight: bold;
+      margin-top: 10px;
+
+      .Label {
+        font-size: 16px;
+        display: flex;
+        align-items: flex-end;
+
+        svg {
+          font-size: 24px;
+        }
+
+        &.Profit {
+          color: $green1;
+        }
+
+        &.Loss {
+          color: $orange2;
+        }
+      }
+    }
+  }
+
+  .Animation {
+    background: #eee;
+    background: linear-gradient(110deg, #ececec 8%, #f5f5f5 18%, #ececec 33%);
+    background-size: 200% 100%;
+    box-shadow: 1px 3px 6px #00000029;
+    border: 1px solid #ececec;
+    animation: 1.5s shine linear infinite;
+    height: 140px;
+    width: 170px;
+    border-radius: 5px;
+
+    @include respond-to(large) {
+      width: unset;
+    }
+  }
+  @keyframes shine {
+    to {
+      background-position-x: -200%;
+    }
+  }
+}

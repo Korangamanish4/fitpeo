@@ -1,0 +1,120 @@
+@import "../../../variable.scss";
+
+.OptionsContainer {
+  max-width: 360px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 15px;
+  background-color: $black1;
+  border-radius: 5px;
+  justify-content: center;
+
+  @include respond-to(large) {
+    max-width: unset;
+  }
+
+  .Section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .LeftSection {
+      display: flex;
+      gap: 25px;
+      align-items: center;
+
+      .IconContainer {
+        border-radius: 50%;
+        height: 70px;
+        width: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @include respond-to(small) {
+          height: 50px;
+          width: 50px;
+        }
+
+        svg {
+          font-size: 30px;
+
+          @include respond-to(small) {
+            font-size: 25px;
+          }
+        }
+
+        &.Orange {
+          background-color: $orange1;
+
+          svg path {
+            fill: $orange3;
+          }
+        }
+
+        &.Blue {
+          background-color: $blue3;
+
+          svg path {
+            fill: $blue4;
+          }
+        }
+
+        &.Green {
+          background-color: $green3;
+
+          svg path {
+            fill: $green4;
+          }
+        }
+      }
+
+      .Label {
+        font-size: 18px;
+        color: $white;
+      }
+    }
+
+    .Button {
+      all: unset;
+      cursor: pointer;
+      height: 25px;
+      width: 25px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background-color: $grey1;
+
+      svg {
+        font-size: 12px;
+        path {
+          fill: $white;
+        }
+      }
+
+      &:hover {
+        svg path {
+          fill: $blue;
+        }
+      }
+    }
+  }
+
+  &.Animation {
+    background: #eee;
+    background: linear-gradient(110deg, #ececec 8%, #f5f5f5 18%, #ececec 33%);
+    background-size: 200% 100%;
+    box-shadow: 1px 3px 6px #00000029;
+    border: 1px solid #ececec;
+    animation: 1.5s shine linear infinite;
+    height: 256px;
+    border-radius: 5px;
+  }
+  @keyframes shine {
+    to {
+      background-position-x: -200%;
+    }
+  }
+}

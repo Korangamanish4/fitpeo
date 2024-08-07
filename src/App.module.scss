@@ -1,0 +1,28 @@
+@import "./variable.scss";
+
+.AppContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100dvh;
+  width: 100dvw;
+  background-color: $black2;
+
+  .AppContent {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: calc(100% - 80px);
+
+    @include respond-to(medium) {
+      height: calc(100% - 60px);
+    }
+
+    @include respond-to(small) {
+      height: calc(100% - 50px);
+    }
+
+    @include respond-to(extraSmall) {
+      height: calc(100% - 40px);
+    }
+  }
+}

@@ -1,0 +1,11 @@
+@import "../../variable.scss";
+
+.CartContainer {
+  padding: 30px 25px;
+
+  .Header {
+    font-size: 25px;
+    font-weight: bold;
+    color: $white;
+  }
+}

@@ -1,0 +1,132 @@
+@import "../../../variable.scss";
+
+.NavigationContainer {
+  height: 100%;
+  width: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $black1;
+
+  @include respond-to(semiLarge) {
+    width: 70px;
+  }
+
+  @include respond-to(medium) {
+    width: 60px;
+  }
+
+  @include respond-to(small) {
+    width: 50px;
+  }
+
+  @include respond-to(extraSmall) {
+    width: 40px;
+  }
+
+  .TopSection {
+    display: flex;
+    width: 80px;
+    flex-direction: column;
+    gap: 5px;
+
+    @include respond-to(semiLarge) {
+      width: 70px;
+    }
+
+    @include respond-to(medium) {
+      width: 60px;
+    }
+
+    @include respond-to(small) {
+      width: 50px;
+    }
+
+    @include respond-to(extraSmall) {
+      width: 40px;
+    }
+
+    .Button {
+      all: unset;
+      width: 100%;
+      margin-top: 20px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2.5px 0;
+
+      svg {
+        font-size: 30px;
+        path {
+          fill: $grey4;
+        }
+
+        @include respond-to(small) {
+          font-size: 24px;
+        }
+      }
+
+      &.Selected {
+        border-left: 2px solid $blue;
+
+        svg path {
+          fill: $blue;
+        }
+      }
+
+      @include respond-to(extraSmall) {
+        margin-top: 15px;
+      }
+    }
+  }
+
+  .BottomSection {
+    margin-bottom: 50px;
+    width: 80px;
+
+    @include respond-to(semiLarge) {
+      width: 70px;
+    }
+
+    @include respond-to(medium) {
+      width: 60px;
+    }
+
+    @include respond-to(small) {
+      width: 50px;
+    }
+
+    @include respond-to(extraSmall) {
+      width: 40px;
+    }
+
+    .Button {
+      all: unset;
+      width: 100%;
+      margin-top: 20px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      svg {
+        font-size: 30px;
+        path {
+          fill: $grey4;
+        }
+
+        @include respond-to(small) {
+          font-size: 24px;
+        }
+      }
+
+      &:hover {
+        svg path {
+          fill: $blue;
+        }
+      }
+    }
+  }
+}

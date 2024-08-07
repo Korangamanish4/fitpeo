@@ -1,0 +1,39 @@
+@import "../../variable.scss";
+
+.DashboardContainer {
+  width: 100%;
+  padding: 0 25px 30px;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  margin-top: 30px;
+
+  @include respond-to(small) {
+    padding: 0 15px 20px;
+    margin-top: 20px;
+  }
+
+  .Header {
+    font-size: 25px;
+    font-weight: bold;
+    color: $white;
+    margin-bottom: 30px;
+
+    @include respond-to(small) {
+      margin-bottom: 20px;
+    }
+  }
+
+  .Content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+
+    @include respond-to(large) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    @include respond-to(small) {
+      gap: 20px;
+    }
+  }
+}

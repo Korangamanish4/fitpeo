@@ -1,0 +1,54 @@
+$black1: #20202a;
+$black2: #141317;
+$grey1: #4a4b53;
+$grey2: #8c8d8f;
+$grey3: #2a2b30;
+$grey4: #87888c;
+$blue: #7296f6;
+$blue1: #2a3168;
+$blue2: #4063ff;
+$blue3: #2a3471;
+$blue4: #5e7cd4;
+$white: #fff;
+$green1: #145243;
+$green2: #00cd8b;
+$green3: #214a60;
+$green4: #409ec4;
+$orange1: #5d3140;
+$orange2: #eb615e;
+$orange3: #da6832;
+$pink1: #592b48;
+$pink2: #d4509b;
+$yellow1: #ffda37;
+
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == extraExtraSmall {
+    @media (max-width: 370px) {
+      @content;
+    }
+  } @else if $breakpoint == extraSmall {
+    @media (max-width: 470px) {
+      @content;
+    }
+  } @else if $breakpoint == semiSmall {
+    @media (max-width: 500px) {
+      @content;
+    }
+  } @else if $breakpoint == small {
+    @media (max-width: 600px) {
+      @content;
+    }
+  } @else if $breakpoint == medium {
+    @media (max-width: 750px) {
+      @content;
+    }
+  } @else if $breakpoint == semiLarge {
+    @media (max-width: 900px) {
+      @content;
+    }
+  } @else if $breakpoint == large {
+    @media (max-width: 1200px) {
+      @content;
+    }
+  }
+}
