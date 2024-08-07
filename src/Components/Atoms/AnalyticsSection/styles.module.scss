@@ -15,17 +15,12 @@
   }
 
   .Content {
-    width: 150px;
     background-color: $black1;
     border-radius: 5px;
     display: flex;
     flex-direction: column;
     padding: 10px;
     gap: 5px;
-
-    @include respond-to(large) {
-      width: unset;
-    }
 
     .IconContainer {
       border-radius: 5px;
@@ -110,12 +105,7 @@
     border: 1px solid #ececec;
     animation: 1.5s shine linear infinite;
     height: 140px;
-    width: 170px;
     border-radius: 5px;
-
-    @include respond-to(large) {
-      width: unset;
-    }
   }
   @keyframes shine {
     to {
